@@ -14,13 +14,13 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-
-gallery.insertAdjacentHTML(
-  'beforeend',
-  images.map(
+const galleryList = images
+  .map(
     image => `<li><img src="${image.url}" alt="${image.alt}" width="240"></li>`
   )
-);
+  .join('');
+gallery.insertAdjacentHTML('beforeend', galleryList);
+
 gallery.setAttribute(
   'style',
   'list-style-type:none',

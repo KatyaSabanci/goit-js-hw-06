@@ -2,9 +2,9 @@ const inputForm = document.getElementById('validation-input');
 
 const colors = () => {
   const symbols = inputForm.value.trim();
-  const symbolInput = parseInt(inputForm.dataset.length);
+  const limit = Number(inputForm.dataset.length);
 
-  if (symbols.length === symbolInput) {
+  if (symbols.length === limit) {
     inputForm.classList.remove('invalid');
     inputForm.classList.add('valid');
     return;
